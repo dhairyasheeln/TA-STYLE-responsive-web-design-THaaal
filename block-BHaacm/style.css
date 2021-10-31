@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Custom styles*/
+
+
+/*My Resets*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*CSS Variables*/
+
+:root{
+    --blue:#222946;
+    --light-blue:#E9ECFC;
+    --green:#37B667;
+    --grey:#8A8B8F;
+    --light-grey:#BCC0D2;
+	--white:#FFFFFF;
+	--black:#020511;
+}
+
+/*Flex Properties*/
+
+.flex{
+	display:flex;
+	justify-content: space-between;
+}
+
+
+.flex-column{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.item-center{
+	align-items: center;
+}
+
+
+.flex-30{
+	flex:0 1 30%;
+}
+
+.flex-44{
+	flex:0 1 44%;
+}
+
+.flex-54{
+	flex:0 1 54%;
+}
+
+/*Container*/
+
+.container{
+    max-width:1400px;
+    margin:0 auto;
+    width:100%;
+}
+
+
+/*Generalized*/
+
+html{
+	font-size: 16px;
+}
+body{
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: 'Roboto', sans-serif;
+}
+
+.padding{
+	padding:44px 0;
+}
+
+.btn{
+	background-color:var(--green);
+	display:inline-block;
+	border-radius: 3px;
+	color:white;
+
+}
+
+.btn-primary{
+	font-size: 20px;
+	margin-top: 20px;
+	padding:10px 20px;
+}
+
+.btn-secondary{
+	font-size: 16px;
+	margin-top: 10px;
+	padding:5px 15px;
+}
+.hero-title,
+.blog-title,
+.box h3{
+	font-family: 'Zen Old Mincho', serif;
+}
+
+.width-100{
+	width:100%;
+}
+
+/*Header*/
+
+.header{
+	background-color: var(--blue);
+	padding:10px 0;
+}
+
+.header-nav li a{
+	color:var(--white);
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-left: 20px;
+}
+
+
+.header-nav li .active{
+	color:#37B667;
+}
+
+
+/*Hero Section*/
+.hero{
+	background-color: var(--light-blue);
+}
+.hero .hero-title{
+	color:var(--black);
+	font-size: 32px;
+	font-weight: 900;
+	margin-bottom: 15px;
+}
+
+.hero .hero-desc{
+	color:var(--grey);
+	font-size: 17px;
+}
+
+.hero .hero-img{
+	font-size: 0;
+}
+
+
+/*Blog*/
+
+.blog .blog-title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: 900;
+	text-transform: capitalize;
+	color: var(--black);
+	margin-bottom: 20px;
+}
+
+.blog .blog-img{
+	font-size: 0;
+}
+
+.box h3{
+	font-size:24px;
+	font-weight:900;
+	color:var(--black);
+}
+.box p{
+	color:var(--grey);
+}
+
+
+/*Footer*/
+
+.footer{
+	padding:50px 0;
+	background-color: var(--blue);
+	color: var(--light-grey);
+}
+
+.footer small{
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.footer .icon{
+	color: var(--light-grey);
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+
+
+
+/*Media Queries for Mobile Layout*/
+
+@media screen and (max-width:768px){
+	.container{
+		flex-direction: column;
+		padding:0 32px;
+	}
+
+	.hero-text{
+	margin-bottom: 32px;
+	}
+	.box{
+		margin-bottom: 32px;
+	}
+	.header-nav{
+		margin-top: 24px;
+	}
+
+
+	.footer-nav{
+		margin-top: 24px;
+	}
+	
+	.footer .icon{
+		margin: 0 10px;
+	}
+
+
+}
