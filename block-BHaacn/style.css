@@ -1,0 +1,447 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Custom styles*/
+
+
+
+/*Container*/
+.container{
+    max-width:1400px;
+    margin:0 auto;
+    width: 100%;
+}
+
+/*Generalized*/
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn{
+    color:var(--white);
+    background-color: var(--red);
+    display:inline-block;
+    border-radius: 3px;
+    padding:10px 25px;
+    text-transform: capitalize;
+    font-size: 16px; 
+}
+
+.width-full{
+    width:100%;
+}
+
+.section-title{
+    font-size: 44px;
+    font-weight: 700;
+    color:var(--black);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-desc{
+    font-size: 20px;
+    color:var(--grey);
+}
+
+.padding{
+    padding: 50px 0;
+}
+
+.padding-top{
+    padding-top:30px;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*My Resets*/
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*CSS Variables*/
+
+:root{
+    --red:#F9234D;
+    --light-blue:#DFECFF;
+    --blue:#23347B;
+    --dark-blue:#102169;
+    --white:#FFFFFF;
+    --black:#01122D;
+    --grey:#6A6970;
+    --light-grey:#BCC0D2;
+}
+
+/*FlexProperties*/
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+    align-items: center;
+}
+
+
+.flex-column{
+    display: flex;
+    flex-direction:column
+}
+
+
+.flex-10{
+    flex:0 1 10%;
+}
+.flex-20{
+    flex:0 1 20%;
+}
+.flex-30{
+    flex:0 1 30%;
+}
+.flex-40{
+    flex:0 1 40%;
+}
+.flex-50{
+    flex:0 1 50%;
+}
+.flex-60{
+    flex:0 1 60%;
+}
+
+.flex-equal{
+    flex: 1 1 auto;
+}
+
+/*Banner*/
+
+.banner{
+    background:linear-gradient(to top right , rgba(32, 22, 110,0.7),rgba(53,37,174,1)),url(assets/banner.png);
+}
+
+/*Header*/
+
+.header{
+    padding:20px 0;
+}
+
+.header .brand{
+    font-size: 30px;
+    font-weight: 700;
+    color:var(--white);
+    text-transform: capitalize;
+}
+.header-nav li{
+    margin-left: 20px;
+}
+.header-nav li a{
+    color:var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-nav .btn{
+    font-size: 16px;
+}
+
+/*Hero Section*/
+
+.hero{
+    padding:40px 0;
+}
+
+.hero .hero-title{
+    font-size: 44px;
+    color: var(--white);
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.highlight{
+    color:var(--red);
+}
+
+.hero .hero-desc{
+    color:var(--white);
+    font-size: 20px;
+}
+
+.hero .btn{
+    margin-top: 20px;
+}
+
+.hero-img{
+    font-size: 0;
+}
+
+
+/*About*/
+.about .section-title{
+    text-transform: uppercase;
+    text-align: left;
+}
+.about-img{
+    font-size: 0;
+}
+
+.about .btn{
+    margin-top: 20px;
+}
+
+
+/*Join*/
+
+.join{
+    background-color: var(--light-blue);
+}
+
+.join .section-title{
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.box{
+    border:2px dashed var(--red);
+    padding:20px 20px 10px 10px;
+}
+.box .box-title{
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.box .box-desc{
+    font-size: 16px;
+    color:var(--grey);
+}
+
+
+/*Schedule*/
+.row{
+    margin-bottom:50px;
+}
+
+.date .circle{
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--red);
+}
+
+.date .dashed-white{
+    border:2px dashed var(--red);
+    background-color: var(--white);
+}
+
+.circle .date-desc{
+    font-size:32px;
+    font-weight: 900;
+    color: var(--white);
+}
+.dashed-white .date-desc{
+    color: var(--red);
+}
+
+.profile-pic{
+    font-size: 0;
+}
+
+.profile-pic img{
+    border-radius: 8px;
+}
+
+.schedule-title{
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+
+.schedule-desc{
+    font-size: 20px;
+    color:var(--grey);
+}
+
+.schedule .btn{
+    margin:0 auto;
+}
+
+
+/*Highlights*/
+.highlights{
+    background-color: var(--light-blue);
+}
+.highlights .idea{
+    background-color: var(--red);
+    border-radius: 5px;
+    padding:40px 0;
+    color: var(--white);
+}
+
+.highlights-count{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.highlights .highlights-title{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/*Video*/
+.video-banner{
+    border-radius: 20px;
+    font-size: 0;
+    position: relative;
+}
+
+.play-icon{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--white);
+    position: absolute;
+    top:50%;
+    bottom:50%;
+    right:50%;
+    left: 50%;
+    line-height: 100px;
+    text-align: center;
+}
+
+.play-icon i{
+    font-size: 100px;
+    color:var(--red);
+}
+/*News*/
+
+.news{
+    background-color: var(--light-blue);
+}
+
+.news .news-title{
+    font-size: 22px;
+}
+
+.news .news-desc{
+    color: var(--grey);
+}
+
+.news a{
+    font-size: 22px;
+    font-weight: 700;
+    color:var(--black);
+    text-decoration: underline;
+}
+
+.news .active{
+    color:var(--red);
+
+}
+
+
+/*Footer*/
+.footer{
+    background-color: var(--blue);
+}
+.footer-top p{
+    color:var(--white);
+    font-size: 20px;
+    font-weight: 700;
+}
+.footer-nav li{
+    margin-right: 20px;
+}
+.footer-nav li a{
+    color:var(--light-grey);
+}
+.social .social-links i{
+    color:var(--light-grey);
+    font-size:20px;
+    margin-right: 20px;
+}
+
+.footer-bottom{
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+}
+.padding-footer-bottom{
+    padding:10px 0;
+}
+
+/* Media Queiries*/
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+}
